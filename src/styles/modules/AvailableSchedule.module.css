@@ -1,0 +1,40 @@
+.availableSchedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  border-bottom: var(--thin-border);
+}
+
+.availableSchedule a {
+  font-size: var(--md-text-size);
+  color: var(--secondary-color);
+  text-decoration: underline;
+  max-width: 60vw;
+  text-align: center;
+  font-weight: 500;
+}
+
+.availableSchedule span {
+  font-size: var(--text-size);
+  color: black;
+  font-weight: 500;
+}
+
+.availableSchedule a,
+.availableSchedule span {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .availableSchedule {
+    flex-direction: row;
+    padding: 2rem 0;
+  }
+
+  .availableSchedule a,
+  .availableSchedule span {
+    margin: 0 0 0 1rem;
+  }
+}

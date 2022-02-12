@@ -1,0 +1,38 @@
+{
+  "name": "jungle-devs-react-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cacheable-response": "^2.1.9",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-hook-form": "^6.15.4"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^12.0.1",
+    "commitlint": "^12.0.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "4.3.8",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "scripts": {
+    "dev": "node src/server.js",
+    "build": "next build",
+    "prod:start": "NODE_ENV=production node src/server.js",
+    "next:start": "next start",
+    "lint": "eslint . -c ./.eslintrc.js --fix-dry-run --ext .js"
+  }
+}

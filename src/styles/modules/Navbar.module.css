@@ -1,0 +1,17 @@
+.navbar {
+  display: none;
+}
+
+.navbar > a:not(:first-of-type) {
+  margin-left: 4rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .navbar {
+    display: flex;
+    margin-left: 8rem;
+    font-size: var(--text-size);
+    font-weight: 500;
+    color: white;
+  }
+}

@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      args:
+        CONTAINER_HOST_PORT: ${HOST_PORT:-443}
+        CONTAINER_SERVER_PORT: ${SERVER_PORT:-3000}
+    ports:
+      - "${HOST_PORT:-443}:${SERVER_PORT:-3000}"

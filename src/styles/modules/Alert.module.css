@@ -1,0 +1,20 @@
+.alert {
+  margin-top: 2rem;
+  font-size: var(--sm-text-size);
+  text-align: center;
+  padding: 1.3rem 1.8rem;
+  font-weight: 500;
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--rounded-radius);
+}
+
+.success {
+  background: var(--success-background-color);
+  border: var(--primary-thin-border);
+}
+
+.error {
+  background: var(--error-background-color);
+  border: var(--error-thin-border);
+}

@@ -1,0 +1,118 @@
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form > label,
+.form input {
+  width: 100%;
+}
+
+.form input {
+  margin-top: 1rem;
+  border: var(--thin-border);
+  color: var(--text-color);
+  padding: var(--text-size) var(--md-text-size);
+}
+
+.form input::placeholder {
+  color: var(--text-color);
+}
+
+.form > button[type='submit'] {
+  margin-top: 2.4rem;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.2rem 0;
+  transition: var(--colors-transition);
+}
+
+.form > button[type='submit'] > span {
+  position: absolute;
+}
+
+.form > button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: inherit;
+}
+
+.form > button[type='submit'],
+.form input {
+  font-size: var(--text-size);
+  border-radius: var(--rounded-radius);
+}
+
+.hidden {
+  font-size: 0.1rem;
+  color: transparent;
+  height: 0.1px;
+}
+
+.spinner {
+  background: url(/assets/icons/spinner.svg);
+  background-size: cover;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  opacity: 0.6;
+  animation: spin 3000ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .form {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 600px;
+    margin-top: 6rem;
+  }
+
+  .form > label {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    position: relative;
+  }
+
+  .form > label p {
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    font-size: var(--sm-text-size);
+  }
+
+  .form input {
+    flex: 1;
+  }
+
+  .form > button[type='submit'] {
+    padding: var(--text-size) calc(var(--xl-text-size) * 1.5);
+    cursor: pointer;
+  }
+
+  .form > button[type='submit']:not(:disabled):hover {
+    background: var(--dark-primary-color);
+  }
+
+  .form input,
+  .form > button[type='submit'] {
+    margin-top: 0;
+  }
+
+  .invalid {
+    margin: 1.25rem 0 0 0.75rem;
+  }
+}

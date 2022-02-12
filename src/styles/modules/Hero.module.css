@@ -1,0 +1,137 @@
+.hero {
+  min-height: 80vh;
+  padding-top: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero::before {
+  background: linear-gradient(
+    314.72deg,
+    hsl(292, 57%, 64%) -1.5%,
+    hsl(266, 50%, 53%) 39.43%,
+    hsl(268, 81%, 37%) 86.02%
+  );
+}
+
+.hero::after {
+  background-image: url('/assets/images/header-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: overlay;
+}
+
+.content {
+  display: flex;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.contentColumn {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 640px;
+  flex: 1;
+}
+
+.contentColumn h1 {
+  font-weight: 500;
+  font-size: var(--xl-text-size);
+  max-width: 280px;
+}
+
+.contentColumn h2 {
+  font-weight: 400;
+  font-size: var(--md-text-size);
+  line-height: 1.8;
+}
+
+.contentColumn + .contentColumn {
+  display: none;
+}
+
+.actionCall {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-top: 4rem;
+}
+
+.actionCall span {
+  margin-left: 2rem;
+  font-weight: 500;
+  font-size: var(--text-size);
+  text-decoration: underline;
+}
+
+/* changes hero::after background if to webp if supported */
+@supports (
+  background-image: -webkit-image-set(url('/assets/images/header-background.webp')
+        1x)
+) {
+  .hero::after {
+    background-image: -webkit-image-set(
+      url('/assets/images/header-background.webp') 1x
+    );
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .content {
+    padding: 0 2rem;
+  }
+
+  .contentColumn h1 {
+    max-width: none;
+  }
+
+  .actionCall span {
+    font-size: var(--md-text-size);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .content {
+    width: 85vw;
+    max-width: 1440px;
+    justify-content: space-between;
+  }
+
+  .contentColumn:first-of-type {
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+  }
+
+  .contentColumn + .contentColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4rem;
+  }
+
+  .contentColumn h1 {
+    font-size: 4rem;
+    margin: 0 0 2rem 0;
+  }
+
+  .contentColumn h2 {
+    font-size: 1.8rem;
+  }
+}

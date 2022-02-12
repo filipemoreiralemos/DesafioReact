@@ -1,0 +1,99 @@
+:root {
+  /*
+    using hsl on colors so it's easier
+    to change to darker/lighter tones
+  */
+  --primary-color: hsl(162, 100%, 39%);
+  --dark-primary-color: hsl(162, 100%, 33%);
+  --secondary-color: hsl(268, 67%, 38%);
+  --dark-secondary-color: hsl(268, 67%, 31%);
+  --background-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 24%);
+  --border-color: hsl(0, 0%, 87%);
+  --success-background-color: hsla(162, 100%, 39%, 0.15);
+  --error-color: hsl(0, 100%, 63%);
+  --error-background-color: hsl(0, 100%, 87%);
+
+  /* sizes */
+  --thin: 1px solid;
+  --rounded-radius: 0.4rem;
+
+  --xl-text-size: 2.8rem;
+  --lg-text-size: 2.2rem;
+  --md-text-size: 1.6rem;
+  --text-size: 1.4rem;
+  --sm-text-size: 1.2rem;
+
+  /* borders */
+  --thin-border: var(--thin) var(--border-color);
+  --primary-thin-border: var(--thin) var(--primary-color);
+  --error-thin-border: var(--thin) hsl(0, 100%, 80%);
+
+  /* transitions */
+  --transition: 200ms ease;
+  --colors-transition: background var(--transition), color var(--transition);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+  define global font-size so we can use rem
+  based on 10px throught the app (e.g. 1.2rem = 12px)
+*/
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: all;
+  text-underline-offset: 0.2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html,
+body,
+ul {
+  padding: 0;
+}
+
+/* increase font-size just a tad so it looks better on large screens */
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 12px;
+  }
+}

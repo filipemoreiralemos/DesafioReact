@@ -1,0 +1,8 @@
+.invalid {
+  font-size: var(--sm-text-size);
+  color: var(--error-color);
+  text-align: left;
+  margin: 1.5rem 0 0 var(--md-text-size);
+  display: flex;
+  align-items: center;
+}

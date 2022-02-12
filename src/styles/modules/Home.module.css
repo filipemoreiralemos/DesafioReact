@@ -1,0 +1,137 @@
+.main {
+  background: var(--background-color);
+}
+
+.content {
+  display: flex;
+  max-width: 580px;
+  margin: auto;
+  padding: 6rem 2rem;
+}
+
+.content > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
+  margin: auto;
+}
+
+.content > section > h3 {
+  font-size: var(--lg-text-size);
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+
+.content > section > p {
+  font-size: var(--md-text-size);
+  margin: 2rem 0;
+}
+
+.content > section > span {
+  margin: 1rem auto 0 auto;
+  font-size: var(--md-text-size);
+}
+
+.content > section a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  font-size: var(--md-text-size);
+  font-weight: 500;
+}
+
+.content > section > p,
+.content > section > span,
+.content > section a {
+  line-height: 1.8;
+}
+
+.content > .mobileHidden {
+  display: none;
+}
+
+.contentLeft {
+  flex-direction: column-reverse;
+}
+
+.contentCenter {
+  align-items: center;
+}
+
+.contentCenter,
+.contentRight {
+  flex-direction: column;
+}
+
+.imageContainer {
+  padding-bottom: 4rem;
+}
+
+.divider {
+  max-width: 90vw;
+  border: var(--thin-border);
+}
+
+@media only screen and (min-width: 900px) {
+  .content {
+    flex-direction: row;
+    margin: auto;
+    max-width: 1200px;
+    padding: 8rem 2rem;
+  }
+
+  .content > section {
+    padding: 0 2rem;
+  }
+
+  .content > section > h3 {
+    font-size: var(--xl-text-size);
+    margin: 0;
+  }
+
+  .content > section > p {
+    margin: 4rem 0;
+  }
+
+  .content > .mobileHidden {
+    display: flex;
+    margin-top: 8rem;
+  }
+
+  .contentCenter {
+    flex-direction: column;
+  }
+
+  .contentCenter > section > p {
+    max-width: 800px;
+  }
+
+  .contentCenter > section + section {
+    margin-top: 4rem;
+  }
+
+  .contentLeft > section > p,
+  .contentRight > section > p {
+    max-width: 500px;
+  }
+
+  .contentLeft > section,
+  .contentRight > section {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .formContent > section > h3 {
+    font-size: var(--lg-text-size);
+  }
+
+  .imageContainer {
+    padding-bottom: 0;
+  }
+
+  .divider {
+    max-width: 900px;
+  }
+}
